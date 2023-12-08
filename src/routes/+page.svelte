@@ -1,7 +1,7 @@
 <script>
     import ArtPickerComponent from "./ArtPickerComponent.svelte";
     import Navbar from "./Navbar.svelte";
-    import PolishPickerComponent from "./PolishPickerComponent.svelte";
+
 
     
     const polishes = [
@@ -53,7 +53,6 @@ let variable = "hellooooo"
 
 <Navbar></Navbar>
 <ArtPickerComponent arts={arts}></ArtPickerComponent>
-<PolishPickerComponent polishes={polishes}></PolishPickerComponent>
 
 <style>
     @font-face {
