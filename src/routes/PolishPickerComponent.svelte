@@ -1,33 +1,36 @@
 <script>
-
     export let polishes
+    
+    console.log(polishes[3].name)
 
 
-console.log("hello", polishes[0].imageUrl)
-console.log(polishImage)
+
     
     let currentPolishIndex = 0;
     let currentImageIndex = 0;
 
     function nesteNederst(){
-    currentPolishIndex++;
-    currentImageIndex++;
+        console.log("nesteN", currentPolishIndex, currentImageIndex)
+        currentPolishIndex++;
+        currentImageIndex++;
 
-    if ( currentPolishIndex >= polishes.length) {
-        currentPolishIndex = 0;
-    }
-    if (currentImageIndex >= 3) {
-        currentImageIndex = 0;
-    }
+        if ( currentPolishIndex >= polishes.length) {
+            currentPolishIndex = 0;
+        }
+        if (currentImageIndex >= 3) {
+            currentImageIndex = 0;
+        }
 
 }
     
 function tilbakeNederst(){
+    console.log("tilbakeN", currentPolishIndex, currentImageIndex)
+
     if ( currentPolishIndex <= 0) {
         currentPolishIndex = polishes.length;
     }
 
-    if (currentImageIndex < 0) {
+    if (currentImageIndex <= 0) {
         currentImageIndex = 2;
     }
 
@@ -37,11 +40,13 @@ function tilbakeNederst(){
 }
 </script>
 
+
+
 <div class="container">        
     <div class="polish1" style="position: relative;">
-        <p> {polishName}</p>
-        <img id="color1" alt="color1" src={polishImage} style="width: 280px; height: 280px;">
-        <p> {polishColor}</p>
+        <p> {polishes[currentPolishIndex].name}</p>
+        <img id="color1" alt="color1" src={polishes[currentImageIndex].imageUrl} style="width: 280px; height: 280px;">
+        <p> {polishes[currentPolishIndex].color}</p>
     </div>
     
 </div>
@@ -50,6 +55,7 @@ function tilbakeNederst(){
     <div>
         <button class ="button button4" id="tilbakeN" on:click={tilbakeNederst}> TILBAKE </button>
         <button class ="button button5" id="stoppN" > STOPP </button>
+
         <button class ="button button6" id="nesteN" on:click={nesteNederst}> NESTE </button>
     </div>
 </div>
