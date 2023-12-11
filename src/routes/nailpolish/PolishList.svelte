@@ -16,6 +16,7 @@ console.log("hello", polishes[0].imageUrl)
 
 
 
+
 <style>
 
 

@@ -48,7 +48,7 @@ const arts = [
     
 ]
 
-let variable = "hellooooo"
+
 
 </script>
 

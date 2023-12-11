@@ -1,14 +1,7 @@
 <script>
-    export let polishName
-    export let polishImage
-    export let polishColor
+    export let polishes
     // halo
-
-
-
-
-
-    </script>
+</script>
     
     
 
@@ -20,4 +13,5 @@
     <style>
     
     </style>
+    
     

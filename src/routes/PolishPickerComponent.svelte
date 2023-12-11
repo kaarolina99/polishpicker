@@ -1,7 +1,7 @@
 <script>
     export let polishes
     
-    console.log(polishes[3].name)
+    console.log(polishes[3].imageUrl)
 
 
 
@@ -17,7 +17,7 @@
         if ( currentPolishIndex >= polishes.length) {
             currentPolishIndex = 0;
         }
-        if (currentImageIndex >= 3) {
+        if (currentImageIndex >= 5) {
             currentImageIndex = 0;
         }
 
@@ -31,7 +31,7 @@ function tilbakeNederst(){
     }
 
     if (currentImageIndex <= 0) {
-        currentImageIndex = 2;
+        currentImageIndex = 5;
     }
 
     currentPolishIndex=currentPolishIndex-1;
@@ -55,7 +55,6 @@ function tilbakeNederst(){
     <div>
         <button class ="button button4" id="tilbakeN" on:click={tilbakeNederst}> TILBAKE </button>
         <button class ="button button5" id="stoppN" > STOPP </button>
-
         <button class ="button button6" id="nesteN" on:click={nesteNederst}> NESTE </button>
     </div>
 </div>
@@ -69,7 +68,6 @@ function tilbakeNederst(){
         flex-direction: column;
         align-items: center;
         justify-content: center; 
-        height: 100vh; 
     }
     
     
@@ -84,6 +82,12 @@ function tilbakeNederst(){
     
     .polish1_container{
         background-color: black;
+        width: 420px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
     }
     
     

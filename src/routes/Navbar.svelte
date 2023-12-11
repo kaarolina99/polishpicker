@@ -13,6 +13,12 @@
 
 <style>
 
+@font-face {
+    font-family: AdLib;
+    src: url("/fonts/AdLibRegular copy/AdLib_Regular.ttf");
+    font-weight: bold;
+}
+
 .topnav {
     background-color: #04063A;
     overflow: hidden;
