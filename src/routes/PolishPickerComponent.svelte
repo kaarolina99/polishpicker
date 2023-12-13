@@ -1,9 +1,5 @@
 <script>
     export let polishes
-    
-    console.log(polishes[3].imageUrl)
-
-
 
     
     let currentPolishIndex = 0;
@@ -44,12 +40,12 @@ function tilbakeNederst(){
 
 <div class="container">        
     <div class="polish1" style="position: relative;">
-        <p> {polishes[currentPolishIndex].name}</p>
         <img id="color1" alt="color1" src={polishes[currentImageIndex].imageUrl} style="width: 280px; height: 280px;">
-        <p> {polishes[currentPolishIndex].color}</p>
+        <p class="overlay-text" style="position: absolute; top: 5px; left: 50%; transform: translate(-50%); color: white;">{polishes[currentPolishIndex].name}</p>
+        <p class="overlay-text" style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); color: white;">{polishes[currentPolishIndex].color}</p>
     </div>
-    
 </div>
+
 
 <div class="polish1_container">
     <div>
@@ -70,6 +66,10 @@ function tilbakeNederst(){
         justify-content: center; 
     }
     
+
+    .overlay-text{
+        font-weight: 550;
+    }
     
     .polish1{
         width: 280px;

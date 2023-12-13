@@ -1,7 +1,5 @@
 <script>
     export let arts
-    
-    console.log(arts[3].imageUrl)
 
 
     let currentArtIndex = 0
@@ -39,14 +37,13 @@ function tilbakeOverst(){
 </script>
 
 
-
 <div class="container">        
     <div class="nailart" style="position: relative;">
-        <p> {arts[currentArtIndex].name}</p>
         <img id="color1" alt="color1" src={arts[currentImageIndex].imageUrl} style="width: 280px; height: 280px;">
+        <p class="overlay-text" style="position: absolute; top: 5px; left: 50%; transform: translate(-50%); color: black;">{arts[currentArtIndex].name}</p>
     </div>
-    
 </div>
+
 
 <div class="nailart_container">
     <div>
@@ -68,7 +65,11 @@ function tilbakeOverst(){
         padding-top: 100px;
     }
     
-    
+    .overlay-text{
+        font-weight: 550;
+    }
+
+
     .nailart{
         width: 280px;
         height: 280px;

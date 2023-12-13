@@ -1,26 +1,26 @@
 <script>
-    import PolishCard from "./PolishCard.svelte";
+    import ArtCard from "./ArtCard.svelte";
 
-    export let polishes
+    export let arts
 
 
-console.log("hello", polishes[0].imageUrl)
+console.log("hello", arts[0].imageUrl)
 
 </script>
 
 <div class="container">  
     <div class="gridcols">
-        {#each polishes as polish}
-            <PolishCard polishName={polish.name} polishImage={polish.imageUrl} polishColor={polish.color} polishInfo={polish.info}></PolishCard>
+        {#each arts as art}
+            <ArtCard artName={art.name} artImage = {art.imageUrl} artInfo={art.info}></ArtCard>
         {/each}
     </div>
 </div>
-
+<!-- polishInfo={polish.info} -->
 
 <style>
     .container {
         width: 100vw;
-        gap: 10px;
+        gap: 15px;
         padding-top: 50px;
     }
     .gridcols {
@@ -34,5 +34,3 @@ console.log("hello", polishes[0].imageUrl)
 
 
 </style>
-
-
