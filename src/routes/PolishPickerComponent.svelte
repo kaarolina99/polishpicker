@@ -13,7 +13,7 @@
         if ( currentPolishIndex >= polishes.length) {
             currentPolishIndex = 0;
         }
-        if (currentImageIndex >= 5) {
+        if (currentImageIndex >= polishes.length) {
             currentImageIndex = 0;
         }
 
@@ -27,7 +27,7 @@ function tilbakeNederst(){
     }
 
     if (currentImageIndex <= 0) {
-        currentImageIndex = 5;
+        currentImageIndex = polishes.length;
     }
 
     currentPolishIndex=currentPolishIndex-1;
@@ -41,8 +41,8 @@ function tilbakeNederst(){
 <div class="container">        
     <div class="polish1" style="position: relative;">
         <img id="color1" alt="color1" src={polishes[currentImageIndex].imageUrl} style="width: 280px; height: 280px;">
-        <p class="overlay-text" style="position: absolute; top: 5px; left: 50%; transform: translate(-50%); color: white;">{polishes[currentPolishIndex].name}</p>
-        <p class="overlay-text" style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); color: white;">{polishes[currentPolishIndex].color}</p>
+        <p class="overlay-text1">{polishes[currentPolishIndex].name}</p>
+        <p class="overlay-text">{polishes[currentPolishIndex].color}</p>
     </div>
 </div>
 
@@ -57,7 +57,6 @@ function tilbakeNederst(){
 
 
 
-
 <style>
 .container {
         display: flex;
@@ -66,9 +65,23 @@ function tilbakeNederst(){
         justify-content: center; 
     }
     
-
+    .overlay-text1{
+        font-weight: 550;
+        text-align: center;
+        position: absolute;
+        top: 5px; 
+        left: 50%; 
+        transform: translate(-50%); 
+        color: white;
+    }
     .overlay-text{
         font-weight: 550;
+        text-align: center;
+        position: absolute;
+        bottom: -10px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        color: white;
     }
     
     .polish1{
